@@ -9,7 +9,7 @@ public class LearningresourcesapiApplication {
 	public static void main(String[] args) {
 
 		SpringApplication.run(LearningresourcesapiApplication.class, args);
-		System.out.println("Hello world....Prasanna");
+		//System.out.println("Hello world....Prasanna");
 	}
 
 }
