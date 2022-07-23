@@ -23,9 +23,10 @@ public class LearningResourceService {
     }
 
 
-    public void saveLearningResources(List<LearningResource> learningResources){
-        for(LearningResource learningResource:learningResources)
+    public void saveLearningResources(List<LearningResource> learningResources) {
+        for (LearningResource learningResource : learningResources) {
             learningResourceRepository.save(learningResource);
+        }
     }
 
     public List<Double> getProfitMargin(){
@@ -49,5 +50,25 @@ public class LearningResourceService {
         });
 
         return learningResources;
+    }
+
+    public void deleteLearningResourceById(int learningResourceId)
+    {
+        learningResourceRepository.deleteById(learningResourceId);
+    }
+
+    public String updateLearningResource(int id,LearningResource learningresource)
+    {
+        if(learningResourceRepository.existsById(id))
+        {
+            learningResourceRepository.save(learningresource);
+            return "Record updated successfully";
+        }
+        else
+            return "Sorry! record doesn't exist";
+    }
+
+    public void save(LearningResource lr) {
+        learningResourceRepository.save(lr);
     }
 }
