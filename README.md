@@ -1,0 +1,2 @@
+# learningresources-api-PrasannaCh
+JPA is a specification which specifies how to access, manage and persist information/data between java objects and relational databases. It provides a standard approach for ORM, Object Relational Mapping. Spring Boot provides a seemless integration with JPA.Created an interface named LearningResourceRepository under repository package.Added the dependency for Spring Data JPA & H2 in-memory database.Modified service class to load/save data to the in-memory database using the repository methods.
